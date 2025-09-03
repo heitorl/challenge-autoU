@@ -2,8 +2,10 @@
 
 import { revalidatePath } from "next/cache";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export async function sendMessageToAPI(message: string) {
-  const response = await fetch(`http://127.0.0.1:5000/api/classify`, {
+  const response = await fetch(`${apiUrl}/api/classify`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,9 +22,9 @@ export async function sendMessageToAPI(message: string) {
 }
 
 export async function sendFileToAPI(formData: FormData) {
-  const response = await fetch(`http://127.0.0.1:5000/api/upload`, {
+  const response = await fetch(`${apiUrl}/api/upload`, {
     method: "POST",
-    body: formData, // multipart/form-data
+    body: formData,
   });
 
   if (!response.ok) {
