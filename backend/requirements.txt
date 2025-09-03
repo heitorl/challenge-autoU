@@ -6,6 +6,7 @@ charset-normalizer==3.4.3
 click==8.2.1
 cryptography==45.0.7
 Flask==3.1.2
+flask-cors==6.0.1
 google-ai-generativelanguage==0.4.0
 google-api-core==2.25.1
 google-auth==2.40.3
@@ -13,10 +14,12 @@ google-generativeai==0.3.0
 googleapis-common-protos==1.70.0
 grpcio==1.74.0
 grpcio-status==1.62.3
+gunicorn==23.0.0
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
 MarkupSafe==3.0.2
+packaging==25.0
 pdfminer.six==20250506
 pdfplumber==0.11.7
 pillow==11.3.0
